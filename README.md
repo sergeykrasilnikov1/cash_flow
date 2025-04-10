@@ -18,7 +18,12 @@
 
 ### Локальная установка
 
-1. Создайте виртуальное окружение:
+0. Склонируйте репозиторий:
+ ```bash
+ git clone https://github.com/sergeykrasilnikov1/cash_flow.git
+cd cash_flow
+```
+2. Создайте виртуальное окружение:
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # для Linux/Mac
@@ -33,6 +38,7 @@ pip install -r requirements.txt
 
 3. Примените миграции:
 ```bash
+python manage.py makemigrations
 python manage.py migrate
 ```
 

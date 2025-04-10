@@ -35,16 +35,15 @@ source .venv/bin/activate  # для Linux/Mac
 ```bash
 pip install -r requirements.txt
 ```
+3. Скопируйте файл .env.example в .env:
+```bash
+cp .env.example .env
+```
 
-3. Примените миграции:
+4. Примените миграции:
 ```bash
 python manage.py makemigrations
 python manage.py migrate
-```
-
-4. Создайте суперпользователя:
-```bash
-python manage.py createsuperuser
 ```
 
 5. Запустите сервер разработки:
@@ -75,10 +74,6 @@ DATABASE_URL=sqlite:///db.sqlite3
 docker-compose up --build
 ```
 
-4. Создайте суперпользователя:
-```bash
-docker-compose exec web python manage.py createsuperuser
-```
 
 Приложение будет доступно по адресу: http://localhost:8000
 
